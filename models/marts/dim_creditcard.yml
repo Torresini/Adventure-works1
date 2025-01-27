@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dim_creditcard
+    description: "Tabela dimensão de cartões de crédito da Adventure Works."
+    columns:
+      - name: sk_creditcard
+        description: "Chave primária gerada com base no creditcardid."
+        tests:
+          - unique
+          - not_null
+
+      - name: creditcardid
+        description: "Identificador único do cartão de crédito."
+
+      - name: cardtype
+        description: "Tipo do cartão de crédito (ex.: Visa, MasterCard)."
+
+      - name: cardnumber
+        description: "Número do cartão de crédito."
+
+      - name: expmonth
+        description: "Mês de expiração do cartão de crédito."
+
+      - name: expyear
+        description: "Ano de expiração do cartão de crédito."
+
+      - name: modifieddate
+        description: "Data de última modificação do registro."

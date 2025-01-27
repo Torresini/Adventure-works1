@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_salesreason
+    description: "Tabela dimensão que contém os motivos de vendas da Adventure Works."
+    columns:
+      - name: sk_salesreason
+        description: "Chave primária gerada com base na coluna salesreasonid."
+        tests:
+          - unique
+          - not_null
+
+      - name: salesreasonid
+        description: "Identificador único do motivo de venda."
+
+      - name: name
+        description: "Nome do motivo de venda."
+
+      - name: reasontype
+        description: "Tipo do motivo de venda."

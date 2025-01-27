@@ -1,0 +1,113 @@
+version: 2
+
+models:
+  - name: fct_sales
+    description: "Tabela fato que consolida dados de pedidos e detalhes de vendas na Adventure Works."
+    columns:
+      - name: sk_salesorderid
+        description: "Chave primária gerada com base no SalesOrderID."
+        tests:
+          - unique
+          - not_null
+
+      - name: salesorderid
+        description: "Identificador do pedido de venda."
+
+      - name: revisionnumber
+        description: "Número de revisão do pedido."
+
+      - name: orderdate
+        description: "Data do pedido."
+
+      - name: duedate
+        description: "Data de vencimento do pedido."
+
+      - name: shipdate
+        description: "Data de envio do pedido."
+
+      - name: status
+        description: "Status do pedido."
+
+      - name: onlineorderflag
+        description: "Flag indicando se o pedido foi feito online."
+
+      - name: purchaseordernumber
+        description: "Número do pedido de compra associado."
+
+      - name: accountnumber
+        description: "Número da conta do cliente."
+
+      - name: customerid
+        description: "Identificador do cliente."
+
+      - name: salespersonid
+        description: "Identificador do vendedor."
+
+      - name: territoryid
+        description: "Identificador do território do pedido."
+
+      - name: billtoaddressid
+        description: "Identificador do endereço de cobrança."
+
+      - name: shiptoaddressid
+        description: "Identificador do endereço de envio."
+
+      - name: shipmethodid
+        description: "Identificador do método de envio."
+
+      - name: creditcardid
+        description: "Identificador do cartão de crédito usado."
+
+      - name: creditcardapprovalcode
+        description: "Código de aprovação do cartão de crédito."
+
+      - name: currencyrateid
+        description: "Identificador da taxa de câmbio."
+
+      - name: subtotal
+        description: "Subtotal do pedido."
+
+      - name: taxamt
+        description: "Valor dos impostos do pedido."
+
+      - name: freight
+        description: "Valor do frete do pedido."
+
+      - name: totaldue
+        description: "Valor total devido do pedido."
+
+      - name: salesorderdetailid
+        description: "Identificador do detalhe do pedido."
+
+      - name: carriertrackingnumber
+        description: "Número de rastreamento do transportador."
+
+      - name: orderqty
+        description: "Quantidade pedida."
+
+      - name: productid
+        description: "Identificador do produto."
+
+      - name: specialofferid
+        description: "Identificador da oferta especial."
+
+      - name: unitprice
+        description: "Preço unitário do produto."
+
+      - name: unitpricediscount
+        description: "Desconto aplicado ao preço unitário."
+
+      - name: fk_address
+        description: "Chave estrangeira para a dimensão de endereço."
+
+      - name: fk_customer
+        description: "Chave estrangeira para a dimensão de cliente."
+
+      - name: fk_creditcard
+        description: "Chave estrangeira para a dimensão de cartão de crédito."
+
+      - name: fk_dates
+        description: "Chave estrangeira para a dimensão de datas."
+
+      - name: fk_productid
+        description: "Chave estrangeira para a dimensão de produtos."

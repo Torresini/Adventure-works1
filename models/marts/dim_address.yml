@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: dim_address
+    description: "Tabela dimensão de endereços da Adventure Works."
+    columns:
+      - name: sk_address
+        description: "Chave primária gerada com base no addressid."
+        tests:
+          - unique
+          - not_null
+
+      - name: addressid
+        description: "Identificador único do endereço."
+
+      - name: addressline1
+        description: "Primeira linha do endereço, como rua e número."
+
+      - name: addressline2
+        description: "Segunda linha do endereço, como complemento (opcional)."
+
+      - name: city
+        description: "Nome da cidade do endereço."
+
+      - name: postalcode
+        description: "Código postal (CEP) do endereço."
+
+      - name: stateprovinceid
+        description: "Identificador único do estado ou província."
+
+      - name: stateprovincecode
+        description: "Código do estado ou província."
+
+      - name: name
+        description: "Nome do estado ou província."
+
+      - name: territoryid
+        description: "Identificador único do território relacionado ao estado/província."

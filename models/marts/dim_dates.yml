@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dim_dates
+    description: "Tabela dimensão de datas utilizada para análises temporais."
+    columns:
+      - name: sk_date
+        description: "Chave primária gerada com base na coluna date_day."
+        tests:
+          - unique
+          - not_null
+
+      - name: date_day
+        description: "Data específica representada no formato YYYY-MM-DD."
+
+      - name: day_of_week_name
+        description: "Nome do dia da semana (ex.: segunda-feira, terça-feira)."
+
+      - name: month_name
+        description: "Nome do mês (ex.: janeiro, fevereiro)."
+
+      - name: year_number
+        description: "Ano correspondente à data."
+
+      - name: quarter_of_year
+        description: "Trimestre do ano (valores de 1 a 4)."
+
+      - name: month_of_year
+        description: "Número do mês no ano (valores de 1 a 12)."

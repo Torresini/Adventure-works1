@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: Fct_Sales_Order
+    description: "Tabela com detalhes de vendas por pedido."
+    materialized: table
+
+  - name: Dim_Sales_Region
+    description: "Tabela com vendas por região."
+    materialized: table
+
+  - name: Dim_Customer_Analysis
+    description: "Tabela com análise de clientes."
+    materialized: table
