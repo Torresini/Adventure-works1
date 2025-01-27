@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: "Tabela dimensão de produtos da Adventure Works."
+    columns:
+      - name: sk_productid
+        description: "Chave primária gerada com base na coluna productid."
+        tests:
+          - unique
+          - not_null
+
+      - name: productid
+        description: "Identificador único do produto."
+
+      - name: name
+        description: "Nome do produto."
+
+      - name: productnumber
+        description: "Número de identificação do produto."
+
+      - name: color
+        description: "Cor do produto, se aplicável."
+
+      - name: standardcost
+        description: "Custo padrão do produto."
+
+      - name: listprice
+        description: "Preço de lista do produto."
+
+      - name: size
+        description: "Tamanho do produto, se aplicável."
+
+      - name: weight
+        description: "Peso do produto, se aplicável."
+
+      - name: productsubcategoryid
+        description: "Identificador da subcategoria do produto."
+
+      - name: productmodelid
+        description: "Identificador do modelo do produto."
+
+      - name: sellstartdate
+        description: "Data de início de vendas do produto."
+
+      - name: sellenddate
+        description: "Data de término de vendas do produto, se aplicável."
+
+      - name: discontinueddate
+        description: "Data em que o produto foi descontinuado, se aplicável."

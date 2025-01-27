@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Tabela dimensão de clientes da Adventure Works."
+    columns:
+      - name: sk_customer
+        description: "Chave primária gerada com base no customerid."
+        tests:
+          - unique
+          - not_null
+
+      - name: customerid
+        description: "Identificador único do cliente."
+
+      - name: personid
+        description: "Identificador único da pessoa associada ao cliente."
+
+      - name: territoryid
+        description: "Identificador do território associado ao cliente."
+
+      - name: storeid
+        description: "Identificador único da loja associada ao cliente."
+
+      - name: businessentityid
+        description: "Identificador da entidade de negócios associada à pessoa ou loja."
+
+      - name: firstname
+        description: "Primeiro nome da pessoa associada ao cliente."
+
+      - name: lastname
+        description: "Sobrenome da pessoa associada ao cliente."
+
+      - name: persontype
+        description: "Tipo da pessoa (ex.: funcionário, vendedor, cliente)."
+
+      - name: name
+        description: "Nome da loja associada ao cliente (se aplicável)."
+
+      - name: salespersonid
+        description: "Identificador do vendedor responsável pela loja do cliente."
+
+      - name: demographics
+        description: "Informações demográficas da loja associada ao cliente."
