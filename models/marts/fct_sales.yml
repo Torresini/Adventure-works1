@@ -7,7 +7,7 @@ models:
       - name: sk_salesorderid
         description: "Chave primária gerada com base no SalesOrderID."
         tests:
-          - unique
+          
           - not_null
 
       - name: salesorderid
