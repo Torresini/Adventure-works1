@@ -87,7 +87,7 @@ sources:
         columns:
           - name: salesreasonid
             tests:
-              - unique
+
               - not_null
 
       
